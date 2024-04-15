@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{user.name}} {{user.age}} {{user.email}} {{user.position}} </h1><br>
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.name.label }} <br>
+            {{ form.name(class="form-control", value=user.name) }} <br>
+            {% for error in form.name.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+              </div>
+            {% endfor %}
+
+        </p>
+
+        <p>
+            {{ form.age.label }} <br>
+            {{ form.age(class="form-control", value=user.age) }} <br>
+            {% for error in form.age.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+              </div>
+            {% endfor %}
+        </p>
+
+
+        {% if message  %}
+        <div class="alert alert-danger" role="alert">
+            {{ message }}
+          </div>
+        {% endif %}
+        <p>
+            {{ form.submit(class="btn btn-primary") }}
+        </p>
+
+
+    </form>
+    <a href="/logout">Выйти</a>
+
+</ul>
+{% endblock %}

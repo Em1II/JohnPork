@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if status == 0 %}
+<h1>{{message}}</h1>
+{% endif %}
+{% if status == 1  %}
+{% for req in requests %}
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>
+            <h2>{{ req.letter }}</h2> <br>
+            <h4>{{ prettyTime(req.request_date) }}</h4> <br>
+            <p>{{ getNameById(req.sender_id) }}</p><br>
+            {{ form.response(class="form-control", id=req.id) }} <br>
+            {% for error in form.response.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endfor %}
+
+        </p>
+        {% if message  %}
+        <div class="alert alert-danger" role="alert">
+            {{ message }}
+          </div>
+        {% endif %}
+        <p>
+            {{ form.submit(class="btn btn-primary") }}
+        </p>
+    </form>
+{% endfor %}
+{% endif %}
+{% endblock %}
