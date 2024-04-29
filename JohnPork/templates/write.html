@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block sup %}
+<form method="POST" action="" enctype="multipart/form-data">
+    {{form.hidden_tag()}}
+    <p style="width:10%">
+        <h4>{{form.title.label (style="color:white")}}</h4>
+        {{ form.title(class="form-control", style="width:30%") }} <br>
+        <h4>{{form.text.label (style="color:white")}}</h4>
+        {{ form.text(class="form-control", style="width:40%") }} <br>
+        <h4>{{form.image.label (style="color:white")}}</h4>
+        {{ form.image(class="white_link") }} <br>
+        
+        {% for error in form.image.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endfor %}
+
+
+    </p>
+    
+    <p onClick="alert('Опубликоано')">{{form.submit (class="porkbtn")}}</p>
+
+
+</form>
+{% endblock %}
