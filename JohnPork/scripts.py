@@ -7,7 +7,7 @@ def getNameById(id):
     db = db_session.create_session()
     return db.query(User).filter(User.id == id).first().name
 def getaPorkSong():
-    link = "http://127.0.0.1:8080/api/Get-Pork-Song"
+    link = "https://91ba8adc4b6b-17607630318181962560.ngrok-free.app/api/Get-Pork-Song"
     d = requests.get(link).json()
     
     return f'Сейчас Джон слушает трек <<{d["response"][1]}>> исполнителя {d["response"][0]}' if d["response"] != "Error" else "Джон Порк сейчас ничего не слушает"
