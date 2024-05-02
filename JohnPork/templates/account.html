@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block sup %}
+    <div style="text-align:start">
+        <h1 style="padding-left:0px" class="white_link">Имя:  {{user.name}}</h1 >
+        <h1 style="padding-left:0px" class="white_link">Возраст: {{user.age}}</h1>
+        <h1 style="padding-left:0px" class="white_link">Эл. почта {{user.email}}</h1>
+        <h1 style="padding-left:0px" class="white_link">Позиция {{user.position}}</h1>
+        <br>
+    </div>
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.name.label (style="color:white")}} <br>
+            {{ form.name(class="form-control", value=user.name, style="width:20%") }} <br>
+            {% for error in form.name.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+              </div>
+            {% endfor %}
+
+        </p>
+
+        <p>
+            {{ form.age.label (style="color:white")}} <br>
+            {{ form.age(class="form-control", value=user.age, style="width:6%") }} <br>
+            {% for error in form.age.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+              </div>
+            {% endfor %}
+        </p>
+
+
+        {% if message  %}
+        <div class="alert alert-danger" role="alert">
+            {{ message }}
+          </div>
+        {% endif %}
+        <p>
+            {{ form.submit(class="porkbtn white_link") }}
+        </p>
+
+
+    </form>
+    <a class="white_link" href="/logout">Выйти</a>
+
+</ul>
+
+{% endblock %}

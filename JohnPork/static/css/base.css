@@ -1,0 +1,273 @@
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background:darkslategrey;
+  }
+  
+  footer {
+    margin-top: auto;
+    color: rgb(217, 217, 217)
+  }
+  .white_link{
+    text-decoration: none;
+  }
+  .white_link:hover{
+    color: white!important;
+  }
+ 
+  a:hover {
+    
+    text-decoration: none!important;
+  }
+    .dropbtn {
+        background-color: #04AA6D;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+      }
+      
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content a:hover {background-color: #ddd; }
+      
+      .dropdown:hover .dropdown-content {display: block;}
+      
+      .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  
+  
+    
+        
+        /* Page content */
+        
+        
+.sticky {
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+        
+        
+.headtext{
+  color:whitesmoke !important;
+  font-size: larger;
+  font-weight: 400;
+}
+.porkbtn{
+  background-color: black;
+  color:aliceblue;
+  padding: 7px;
+}
+      
+.white_link{
+  color: white!important;
+}
+
+.white_link:hover{
+  color: white!important;
+}
+
+
+
+
+@media (min-width:1124px) {
+
+  .q{
+      padding-left: 90px;
+  }
+  .dh1{
+      width: 75%;
+  }
+  .ff{
+      display: flex;
+      justify-content: space-between;
+  }
+}
+@media (max-width:1124px){
+
+  .q{
+      display: none;
+  }
+  .dh1{
+      width: 100%;
+  }
+  .ff{
+      display: flex;
+      justify-content: space-between;
+  }
+
+}
+@media (max-width:500px){
+  .ff{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  .dh1{
+      display: flex;
+      flex-direction: column;
+  }
+}
+@media (max-width:320px) {
+  
+  .paket{
+      display: none;
+  }
+  .q{
+      display: none;
+  }
+  .dh1{
+      display: flex;
+      flex-direction: column;
+  }
+  .ff{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  
+
+  
+
+}
+.hg1{
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 10px;
+}
+.l{
+  
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 3px;
+  padding-right: 9px;
+}
+.lgr{
+  letter-spacing: 3px;
+  font-weight: 300;
+  color: #57AD56;
+}
+.l1{
+  
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 3px;
+  padding-right: 9px;
+  font-size: 40px;
+  color: white;
+}
+.lgr1{
+  font-size: 40px;
+  letter-spacing: 3px;
+  font-weight: 300;
+  color: #57AD56;
+}
+
+
+.inp{
+  margin: 0;
+  margin-left: 5%;
+  width: 90%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #757575;
+}
+.card{
+  border: 0;
+}
+
+.h{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.c{
+  margin: 5%;
+}
+
+.card{
+  padding-bottom: 50px;
+}
+.crd:hover{
+  text-decoration: underline;
+}
+.crd{
+  padding-top: 20px;
+  color: black;
+  text-decoration: none;
+}
+.crd_text{
+  color: #626262;
+  text-decoration: none;
+}
+.my-dropdown-toggle::after {
+  content: none;
+}
+h1{
+  padding: 5%;
+  padding-bottom: 0px;
+}
+
+.dh{
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 2%;
+}
+.tx{
+  color: white;
+}
+.tx:hover{
+  color: white;
+}
+.dh1{
+  display: flex;
+  justify-content: space-between;
+}
+.ht{
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.qwe{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 30px;
+}
+.j{
+  padding-top: 20px;
+}
+.supuniversal{
+  margin-top:5%; margin-bottom:5%; margin-right: 15%; margin-left: 15% 
+}
+
+.articletext{
+  font-size: larger;
+  
+}
