@@ -110,6 +110,8 @@ def get_last_dialog(id):
     if dialogs:
         dialogs.sort(key=lambda a: a.response_date, reverse=True)
         dialog = dialogs[0]
+        if (datetime.datetime.now() - dialog.response_date) > datetime.timedelta(days=1, hours=12):
+            return message, out
         message, out = dialog.response, " Дж. Порк в ответ на ваше последнее письмо"
     
     return message, out
@@ -321,7 +323,7 @@ def article(id):
 def main():
     db_session.global_init("db/JohnPork.db")
     app.register_blueprint(blueprint)
-    app.run(port=8080, debug=True)
+    app.run(port=8080)
 
  
 
@@ -330,5 +332,8 @@ if __name__ == '__main__':
 
     main()
     
+    
+
+
     
 
